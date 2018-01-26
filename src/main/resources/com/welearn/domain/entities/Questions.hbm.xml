@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 Jan, 2018 7:24:22 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.welearn.domain.entities.Questions" table="questions" catalog="school" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="quizId" type="int">
+            <column name="quiz_id" not-null="true" />
+        </property>
+        <property name="questionId" type="int">
+            <column name="question_id" not-null="true" />
+        </property>
+        <property name="question" type="string">
+            <column name="question" not-null="true" />
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="9999" not-null="true" />
+        </property>
+        <property name="codeType" type="string">
+            <column name="code_type" length="30" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="2" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
